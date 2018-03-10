@@ -19,15 +19,22 @@ var wordlist = ["Black Panther","Love Jones"]
 // define variables for wins and loses
 var wins = 0
 var losses = 0
-
+var word;
+var arrayWord;
 
 //select the random word to be guessed for the puzzle
 document.onclick = function(){
-    var word = wordlist[Math.floor(Math.random()*wordlist.length)];
+    word = wordlist[Math.floor(Math.random()*wordlist.length)];
     console.log(word) ;
     var guess = word.replace(/[^ ]/g, '_ ');
     word.replace()
    console.log(guess);
+   arrayWord=word.split("");
+   console.log(arrayWord);
+   for (var i = 0; i < arrayWord.length; i++){
+    console.log(arrayWord[i]);
+}
+
 
 }
 
@@ -43,15 +50,18 @@ var html =
 
 //prompt user to enter a letter (press any key to start)
 
-//   document.addEventListener.onkey = checkletter();
 
 document.onkeydown = function checkletter(event){
    var letter = event.key;
    console.log("var letter in my function "+ letter);
+   console.log(word);
 }
 
 
 //valdiate letter choice
+//if letter in word then reveal
+
+
 
 //reveal the number of guesses that remain for the user
 
