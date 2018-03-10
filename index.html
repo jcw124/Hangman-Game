@@ -10,7 +10,7 @@
         <div id="press">
                 <p>Click anywhere to begin</p>
               </div>
-
+ 
  <script>   
 //define array of possible answers and declare variable for the select word that is chosen randomly
 var wordlist = ["Black Panther","Love Jones"]
@@ -25,6 +25,10 @@ var losses = 0
 document.onclick = function(){
     var word = wordlist[Math.floor(Math.random()*wordlist.length)];
     console.log(word) ;
+    var guess = word.replace(/[^ ]/g, '_ ');
+    word.replace()
+   console.log(guess);
+
 }
 
 
@@ -37,10 +41,6 @@ var html =
         document.querySelector("#press").innerHTML = html;
 
 
-
-//display instructions to player 
-//display the appropriate number of lines for the word
-
 //prompt user to enter a letter (press any key to start)
 
 //   document.addEventListener.onkey = checkletter();
@@ -49,7 +49,6 @@ document.onkeydown = function checkletter(event){
    var letter = event.key;
    console.log("var letter in my function "+ letter);
 }
-
 
 
 //valdiate letter choice
