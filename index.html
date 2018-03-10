@@ -13,39 +13,44 @@
 
  <script>   
 //define array of possible answers and declare variable for the select word that is chosen randomly
-var wordlist = ["Black Panther","Love Jones", "Shaft", "Roots", "Waiting to Exhale", "Life", "Foxxy Brown", "House Party", "Boomerang", "Poetic Justice", "Friday", "Malcolm X", "Boyz N the Hood", "School Daze","Clockers","The Wood","Jungle Fever","The Color Purple", "Barbershop","Selma","Glory"];
+var wordlist = ["Black Panther","Love Jones"]
+//  "Shaft", "Roots", "Waiting to Exhale", "Life", "Foxxy Brown", "House Party", "Boomerang", "Poetic Justice", "Friday", "Malcolm X", "Boyz N the Hood", "School Daze","Clockers","The Wood","Jungle Fever","The Color Purple", "Barbershop","Selma","Glory"];
 
-// define variables
+// define variables for wins and loses
 var wins = 0
-var lose = 0
+var losses = 0
 
-// function selectWord(){
-// var word = wordlist[Math.floor(Math.random()*wordlist.length)];
-// }
+
+//select the random word to be guessed for the puzzle
 document.onclick = function(){
     var word = wordlist[Math.floor(Math.random()*wordlist.length)];
     console.log(word) ;
 }
 
 
-
-//select the random word to be guessed for the puzzle
-
-
-
-
-
-
-
 //display the number of wins (number of times the word was guessed correctly)
+var html =
+          "<p>Wins: " + wins + "</p>" +
+          "<p>Losses: " + losses + "</p>" 
+
+        // Set the inner HTML contents of the #game div to our html string
+        document.querySelector("#press").innerHTML = html;
+
+
 
 //display instructions to player 
-
-// select word to to guess
-
 //display the appropriate number of lines for the word
 
 //prompt user to enter a letter (press any key to start)
+
+//   document.addEventListener.onkey = checkletter();
+
+document.onkeydown = function checkletter(event){
+   var letter = event.key;
+   console.log("var letter in my function "+ letter);
+}
+
+
 
 //valdiate letter choice
 
