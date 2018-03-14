@@ -1,89 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Hangman-Game</title>
+
+    <link rel="stylesheet" type="text/css" href="assests/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assests/css/style.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
 </head>
+
 <body>
-        <div id="press">
-                <p>Click anywhere to begin</p>
-              </div>
- 
- <script>   
-//define array of possible answers and declare variable for the select word that is chosen randomly
-var wordlist = ["Black Panther","Love Jones"]
-//  "Shaft", "Roots", "Waiting to Exhale", "Life", "Foxxy Brown", "House Party", "Boomerang", "Poetic Justice", "Friday", "Malcolm X", "Boyz N the Hood", "School Daze","Clockers","The Wood","Jungle Fever","The Color Purple", "Barbershop","Selma","Glory"];
+    <div>Click anywhere to begin</div>
+    <div id="press">
+        <p></p>
+    </div>
 
-// define variables for wins and loses
-var wins = 0
-var losses = 0
-var word;
-var arrayWord;
+    <div id="guess"></div>
+  
 
-//select the random word to be guessed for the puzzle
-document.onclick = function(){
-    word = wordlist[Math.floor(Math.random()*wordlist.length)];
-    console.log(word) ;
-    var guess = word.replace(/[^ ]/g, '_ ');
-    word.replace()
-   console.log(guess);
-   arrayWord=word.split("");
-   console.log(arrayWord);
-   for (var i = 0; i < arrayWord.length; i++){
-    console.log(arrayWord[i]);
-}
-
-
-}
-
-
-//display the number of wins (number of times the word was guessed correctly)
-var html =
-          "<p>Wins: " + wins + "</p>" +
-          "<p>Losses: " + losses + "</p>" 
-
-        // Set the inner HTML contents of the #game div to our html string
-        document.querySelector("#press").innerHTML = html;
-
-
-//prompt user to enter a letter (press any key to start)
-
-
-document.onkeydown = function checkletter(event){
-   var letter = event.key;
-   console.log("var letter in my function "+ letter);
-   console.log(word);
-}
-
-
-//valdiate letter choice
-//if letter in word then reveal
-
-
-
-//reveal the number of guesses that remain for the user
-
-//if the letter is in the word reveal it. 
-
-//if the letter is not then  add it to the guessed lettersand decrease the number or remaining guesses
-
-// if the remaining guesses get to 0, reveal the word 
-
-// if the user guess the word - do something
-
-//increment wins /losses
-
-//loop to choose a new word and have the user play again
-
-
-
-//attempt bonus touchs once game works
-//play a sound or song  when the word is guessed correctly
-//add css to style along with my game theme
-//organize code as anobject
-//
-</script>
+       
+            <script type="text/javascript" src="assests/javascript/game.js"></script>
 </body>
+
+
 </html>
